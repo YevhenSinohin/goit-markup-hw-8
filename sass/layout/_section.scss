@@ -1,0 +1,41 @@
+.section {
+    background: $second-color;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.section__icon {
+    width: 270px;
+    height: 120px;
+    background: $bg-color;
+    border-radius: 4px;
+    padding: 25px 102px;
+    margin-bottom: 30px;
+}
+
+.section__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $main-color;
+    margin-bottom: 10px;
+}
+
+.section__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $grey-color;
+
+}
+
+.section__schedule {
+    display: flex;
+    gap: 30px;
+}
+
+.section__merit {
+    flex-basis: calc((100% - 90px) / 4);
+}

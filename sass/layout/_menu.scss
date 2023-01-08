@@ -1,14 +1,16 @@
 .menu {
     display: flex;
     padding: 0;
-    margin: 0;
+   
     list-style: none;
 }
 
 @media (max-width: 767px) {
     .menu {
         display: none;
+        
     }
+    
 }
 
 .menu .link {
@@ -27,8 +29,8 @@
     min-width: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    justify-content: space-between;
+   
     margin-left: auto;
     padding: 0;
     background-color: transparent;
@@ -46,10 +48,11 @@
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: $backdrop-color;
 }
 
 .menu-container {
+
     position: fixed;
     top: 0;
     left: 0;
@@ -61,6 +64,8 @@
     background-color: $second-color;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
     z-index: 999;
+    
+    
 
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
@@ -74,12 +79,12 @@
     position: absolute;
     top: 16px;
     right: 16px;
-    color: $second-color;
+    color: $main-color;
+    
 }
 
 .mobile-menu {
-    padding: 0;
-    margin: 0;
+   
     list-style: none;
     margin-bottom: auto;
 }
@@ -87,7 +92,7 @@
 .mobile-menu .link {
     display: block;
     padding: 10px;
-    color: $second-color;
+    /*color: $second-color;*/
     text-decoration: none;
 }
 .list {
@@ -97,14 +102,32 @@
 .mobile-socials {
     display: flex;
     gap: 20px;
+    position: relative;
 
 }
-.mobile-menu-link.current {
-    color: $blue-color;
-    
+.mobile-socials-item {
+    position: relative;
 }
+
+.mobile-socials-item:not(:first-child)::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: 22px;
+        top: 0;
+        left: -10px;
+        background-color: $input-color;
+       
+        
+        
+    }
+
+
+
+
 .mobile-menu-link {
-    font-family:$primary-font;
+        font-family:$primary-font;
         font-style: normal;
         font-weight: 500;
         font-size: 40px;
@@ -113,19 +136,36 @@
     
         color: $main-color;
 }
+
+.mobile-menu-link.current {
+    color: $blue-color;
+}
+
+.mobile-menu-link:hover {
+
+    fill: $blue-color;
+}
+
+.mobile-item:first-child {
+    margin-bottom: 32px;
+}
+.mobile-item:last-child {
+    margin-bottom: 64px;
+}
+
 .mobile-contacts-link-tel {
-    font-family: $primary-font;
+        font-family: $primary-font;
         font-style: normal;
         font-weight: 500;
         font-size: 34px;
-        line-height:calc(40/34);
+        line-height: calc(40/34);
         letter-spacing: 0.02em;
-    text-decoration: none;
-        color:$blue-colo;
-        margin-bottom: 32px;
+        text-decoration: none;
+        color: $blue-color;
+       
 }
 .mobile-contacts-link {
-    font-family:$primary-font;
+        font-family:$primary-font;
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
@@ -140,9 +180,9 @@
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
-        line-height:calc(22/24);
+        line-height: calc(22/24);
         letter-spacing: 0.02em;
-    text-decoration: none;
+        text-decoration: none;
         color: $blue-color;
 }
 .mobile-menu-link {

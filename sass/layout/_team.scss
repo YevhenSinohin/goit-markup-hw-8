@@ -1,18 +1,31 @@
 .team {
     background: $beige-color;
-    padding: 94px 15px;
+    /*padding: 94px 15px;*/
     display: flex;
 }
-
+.team .container {
+    
+}
 .team__cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: calc((100% - 30px) / 2);
+        gap: 30px;
+
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        /*flex-basis: calc((100% - 120px) / 4);*/
+        gap: 30px;
+    }
+
 }
 
 .team__item {
     background-color: $second-color;
-    flex-basis: calc((100% - 90px) / 4);
+    /*flex-basis: calc((100% - 90px) / 4);*/
     text-align: center;
     border-radius: 0px 0px 4px 4px;
     padding-bottom: 30px;

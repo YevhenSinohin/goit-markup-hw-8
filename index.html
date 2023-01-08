@@ -34,13 +34,55 @@
                         </use>
                     </svg>+38 096 111 11 11</a></li>
             </ul>
+
+
             <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                        clip-rule="evenodd"></path>
+                <svg width="32" height="32">
+                    <use href="./img/icons.svg#icon-menu_40px"></use>
                 </svg>
             </button>
+            <div class="menu-container js-menu-container" id="mobile-menu">
+                <button class="menu-toggle js-close-menu">
+                    <svg width="32" height="32">
+                        <use href="./img/icons.svg#icon-close_40px"></use>
+                    </svg>
+                </button>
+            
+                <ul class="mobile-menu">
+                    <li class="mobile-menu-item">
+                        <a class="mobile-menu-link link current" href="">Студія</a>
+                    </li>
+                    <li class="mobile-menu-item">
+                        <a class="mobile-menu-link link" href="">Портфоліо</a>
+                    </li>
+                    <li class="mobile-menu-item">
+                        <a class="mobile-menu-link link" href="">Контакти</a>
+                    </li>
+            
+                </ul>
+                <ul class="mobile-contacts list">
+                    <li class="mobile-item">
+                        <a href="" class="mobile-contacts-link-tel">+1 212-772-4150</a>
+                    </li>
+                    <li class="mobile-item">
+                        <a href="" class="mobile-contacts-link">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobile-socials list">
+                    <li class="mobile-socials-item">
+                        <a href="" class="mobile-social-link">Instagram</a>
+                    </li>
+                    <li class="mobile-socials-item">
+                        <a href="" class="mobile-social-link">Twitter</a>
+                    </li>
+                    <li class="mobile-socials-item">
+                        <a href="" class="mobile-social-link">Facebook</a>
+                    </li>
+                    <li class="mobile-socials-item">
+                        <a href="" class="mobile-social-link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
       
     </header> 
@@ -49,17 +91,17 @@
 
         <!-- Замовлення послуги -->
 
-      <!-- <section class="hero">
-            <div class="container">
-                <h1 class="hero__title">Ефективні рішення для <br> вашого бізнесу</h1>
-                <button class="button" type="button"  data-modal-open>Замовити послугу</button>
-            </div>
-           
-        </section>  -->
+    <section class="hero">
+    
+        <h1 class="hero__title">Ефективні рішення для <br> вашого бізнесу</h1>
+        <button class="button" type="button" data-modal-open>Замовити послугу</button>
+    
+    
+    </section>
 
 
         <!-- Переваги -->
-        <!-- <section class="section">
+        <section class="section">
         <div class="container">
             <h2 hidden>Переваги</h2>
             <ul class="section__schedule">
@@ -98,11 +140,11 @@
         
         </div>
            
-        </section> -->
+        </section> 
 
 
         <!-- Чим ми займаємося -->
-<!--   <section class="about">
+  <section class="about">
             <div class="container">
                 <h2 class="about__title">Чим ми займаємося</h2>
                 <ul class="about__options">
@@ -147,16 +189,24 @@
                 </ul>
             </div>
           
-        </section>  -->  
+        </section>    
 
 <!-- Наша команда -->
 
-    <!--   <section  class="team">
+       <section  class="team">
             <div class="container">
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__cards">
                     <li class="team__item list">
-                        <img src="./img/productdesigner.jpg" alt="Product Designer" width="270">
+                        <img srcset="
+                        ./img/team/img1_270.jpg 270w,
+                        ./img/team/img1_354.jpg 354w,
+                        ./img/team/img1_450.jpg 450w,
+                        ./img/team/img1_540.jpg 540w,
+                        ./img/team/img1_708.jpg 708w,
+                        ./img/team/img1_900.jpg 900w
+                        " sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw "
+                         src="./img/productdesigner.jpg" alt="Product Designer" loading="lazy"/>
                         <h3 class="team__pretitle">Ігор Дем'яненко</h3>
                         <p class="team__text">Product Designer</p>
                         <ul class="team__social-list list">
@@ -192,7 +242,18 @@
                         </ul>
                     </li>
                     <li class="team__item list">
-                        <img src="./img/frontenddeveloper.jpg" alt="Frontend Developer" width="270">
+                        <img 
+                        srcset="
+                        ./img/team/img2_270.jpg 270w,
+                        ./img/team/img2_354.jpg 354w,
+                        ./img/team/img2_450.jpg 450w,
+                        ./img/team/img2_540.jpg 540w,
+                        ./img/team/img2_708.jpg 708w,
+                        ./img/team/img2_900.jpg 900w
+                        " 
+                        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw "
+
+                        src="./img/frontenddeveloper.jpg" alt="Frontend Developer" loading="lazy">
                         <h3 class="team__pretitle">Микола Тарасов</h3>
                         <p class="team__text">Marketing</p>
                         <ul class="team__social-list list">
@@ -228,7 +289,17 @@
                         </ul>
                     </li>
                     <li class="team__item list">
-                        <img src="./img/marketing.jpg" alt="Marketing" width="270">
+                        <img 
+                             srcset="
+                        ./img/team/img3_270.jpg 270w,
+                        ./img/team/img3_354.jpg 354w,
+                        ./img/team/img3_450.jpg 450w,
+                        ./img/team/img3_540.jpg 540w,
+                        ./img/team/img3_708.jpg 708w,
+                        ./img/team/img3_900.jpg 900w
+                        " 
+                        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw "
+                        src="./img/marketing.jpg" alt="Marketing" loading="lazy">
                         <h3 class="team__pretitle">Микола Тарасов</h3>
                         <p class="team__text">Marketing</p>
                         <ul class="team__social-list ">
@@ -264,7 +335,17 @@
                         </ul>
                     </li>
                     <li class="team__item list">
-                        <img src="./img/uidesigner.jpg" alt="UI Designer" width="270">
+                        <img 
+                             srcset="
+                        ./img/team/img4_270.jpg 270w,
+                        ./img/team/img4_354.jpg 354w,
+                        ./img/team/img4_450.jpg 450w,
+                        ./img/team/img4_540.jpg 540w,
+                        ./img/team/img4_708.jpg 708w,
+                        ./img/team/img4_900.jpg 900w
+                        " 
+                        sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw "
+                        src="./img/uidesigner.jpg" alt="UI Designer" loading="lazy">
                         <h3 class="team__pretitle">Михайло Єрмаков</h3>
                         <p class="team__text">UI Designer</p>
                         <ul class="team__social-list list">
@@ -301,12 +382,12 @@
                     </li>
                 </ul>
             </div>
-            </section>   -->
+            </section>   
 
 <!-- /* Постійні клієнти */ -->
 
 
-    <!-- <section class="clients"> 
+    <section class="clients"> 
             <div class="container">
                 <h4 class="client__title">Постійні клієнти</h4>
                 <ul class="client__list">
@@ -365,12 +446,12 @@
                     </li>
                 </ul>
             </div>
-        </section>  -->
+        </section>  
     </main>
 
     
 <!-- <!-- Подвал -->
-<!-- <footer class="footer">
+ <footer class="footer">
     <div class="container footer__container">
 
         <div class="footer__data data">
@@ -446,117 +527,85 @@
     </div>
 
 
-</footer> -->
+</footer> 
 
   
 
 
-   <!--  <div class="backdrop is-hidden" data-modal>
+<div class="backdrop is-hidden" data-modal>
 
-        <div class="backdrop__modal">
-            <button class="backdrop__close-sign " data-modal-close>
-                <svg class="backdrop__icon" width="11" height="11" >
-                    <use href="./img/icons.svg#icon-close-button"></use>
-                </svg>
-            </button>
-           
-            <form name="form-box" class="backdrop__form form">
-                <p class="form__modal-text">Залиште свої дані, ми вам передзвонимо</p>
-            
-                <label for="user-name" class="form__modal-label">Ім'я</label>
-                <div class="form__wrapper">
-                    <input name="user-name" id="user-name" type="text" class="form__modal-input">
-                    <svg class="form__modal-icon" width="18" height="18">
-                        <use href="./img/icons.svg#icon-person"></use>
-                    </svg>
-                </div>
-            
-            
-                <label for="user-phone" class="form__modal-label">Телефон</label>
-                <div class="form__wrapper">
-                    <input name="user-tel" id="user-phone" type="tel" class="form__modal-input">
-                    <svg class="form__modal-icon" width="18" height="18">
-                        <use href="./img/icons.svg#icon-phone-black"></use>
-                    </svg>
-                </div>
-                
-                
-                <label for="user-male" class="form__modal-label">Пошта</label>
-                <div class="form__wrapper">
-                    <input name="user-male" id="user-male" type="email" class="form__modal-input">
-                    <svg class="form__modal-icon" width="18" height="18">
-                        <use href="./img/icons.svg#icon-email-black"></use>
-                    </svg>
-                </div>
-                
-                
-                <label for="user-text" class="form__modal-label">Коментар</label>
-                <textarea name="user-text" id="user-text" placeholder="Введіть текст" class="form__textarea"></textarea>
-            
-                
-                
-             
-                <label class="form__checkbox-label">
-                
-                    <input type="checkbox" name="chekbox" class="form__checkbox-input">
-                    <span class="form__checkbox-icon"></span>
-                    Погоджуюся з розсилкою та приймаю
-                    <a class="form__checkbox-terms" href=""> Умови договору</a>
-                
-                </label>
-            
-   
-            
-            
-                <button type="submit" class="form__modal-button">
-                    Відправити
-                   
-
-                </button>
-            
-            
-            
-            </form>
-        </div> 
-    </div> -->
-     <div class="menu-container js-menu-container" id="mobile-menu">
-        <button class="menu-toggle js-close-menu">
-            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-            path d="M23.733 10.304l-1.504-1.504-5.963 5.963-5.963-5.963-1.504 1.504 5.963 5.963-5.963 5.963 1.504 1.504 5.963-5.963
-            5.963 5.963 1.504-1.504-5.963-5.963 5.963-5.963z"></path>
+    <div class="backdrop__modal">
+        <button class="backdrop__close-sign " data-modal-close>
+            <svg class="backdrop__icon" width="11" height="11">
+                <use href="./img/icons.svg#icon-close-button"></use>
             </svg>
         </button>
-    
-        <ul class="mobile-menu">
-            <li mobile-menu-item>
-                <a href="" class="mobile-menu-link link current">Studio</a></li>
-            <li mobile-menu-item>
-                <a href="" class="mobile-menu-link link">Portfolio</a></li>
-            <li mobile-menu-item>
-                <a href="" class="mobile-menu-link link">Contacts</a></li>
-           
-        </ul>
-        <ul class="mobile-contacts list">
-            <li class="mobile-item">
-                <a href="" class="mobile-contacts-link-tel">+1 212-772-4150</a></li>
-            <li class="mobile-item">
-                <a href="" class="mobile-contacts-link">info@devstudio.com</a></li>
-        </ul>
-        <ul class="mobile-socials list">
-            <li class="mobile-socials-item">
-                <a href="" class="mobile-social-link">Instagram</a></li>
-            <li class="mobile-socials-item">
-                <a href="" class="mobile-social-link"></a>Twitter</li>
-            <li class="mobile-socials-item">
-                <a href="" class="mobile-social-link"></a>Facebook</li>
-            <li class="mobile-socials-item">
-                <a href="" class="mobile-social-link">LinkedIn</a></li>
-        </ul>
-    </div> 
-    <script src="./js/modal.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-        crossorigin="anonymous"></script>
-    <script defer src="js/mobile-menu.js"></script>
+
+        <form name="form-box" class="backdrop__form form">
+            <p class="form__modal-text">Залиште свої дані, ми вам передзвонимо</p>
+
+            <label for="user-name" class="form__modal-label">Ім'я</label>
+            <div class="form__wrapper">
+                <input name="user-name" id="user-name" type="text" class="form__modal-input">
+                <svg class="form__modal-icon" width="18" height="18">
+                    <use href="./img/icons.svg#icon-person"></use>
+                </svg>
+            </div>
+
+
+            <label for="user-phone" class="form__modal-label">Телефон</label>
+            <div class="form__wrapper">
+                <input name="user-tel" id="user-phone" type="tel" class="form__modal-input">
+                <svg class="form__modal-icon" width="18" height="18">
+                    <use href="./img/icons.svg#icon-phone-black"></use>
+                </svg>
+            </div>
+
+
+            <label for="user-male" class="form__modal-label">Пошта</label>
+            <div class="form__wrapper">
+                <input name="user-male" id="user-male" type="email" class="form__modal-input">
+                <svg class="form__modal-icon" width="18" height="18">
+                    <use href="./img/icons.svg#icon-email-black"></use>
+                </svg>
+            </div>
+
+
+            <label for="user-text" class="form__modal-label">Коментар</label>
+            <textarea name="user-text" id="user-text" placeholder="Введіть текст" class="form__textarea"></textarea>
+
+
+
+
+            <label class="form__checkbox-label">
+
+                <input type="checkbox" name="chekbox" class="form__checkbox-input">
+                <span class="form__checkbox-icon"></span>
+                Погоджуюся з розсилкою та приймаю
+                <a class="form__checkbox-terms" href=""> Умови договору</a>
+
+            </label>
+
+
+
+
+            <button type="submit" class="form__modal-button">
+                Відправити
+
+
+            </button>
+
+
+
+        </form>
+    </div>
+</div>
+
+<script src="./js/modal.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+<script defer src="js/mobile-menu.js"></script>
 </body>
+
 </html>

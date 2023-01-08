@@ -3,14 +3,34 @@
     padding-top: 94px;
     padding-bottom: 94px;
 }
+.section__schedule {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
+  
+}
 
+.section__merit {
+  
+    flex-basis: calc((100% - 90px) / 4);
+ 
+}
 .section__icon {
-    width: 270px;
+    max-width: 450px;
     height: 120px;
     background: $bg-color;
     border-radius: 4px;
     padding: 25px 102px;
     margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+        max-width: 354px;
+        }
+    @media screen and (min-width: 1200px) {
+        max-width: 270px;
+    }
 }
 
 .section__title {
@@ -21,6 +41,9 @@
     text-transform: uppercase;
     color: $main-color;
     margin-bottom: 10px;
+    justify-content: center;
+        align-content: center;
+        align-items: center;
 }
 
 .section__text {
@@ -31,11 +54,4 @@
 
 }
 
-.section__schedule {
-    display: flex;
-    gap: 30px;
-}
 
-.section__merit {
-    flex-basis: calc((100% - 90px) / 4);
-}

@@ -692,11 +692,12 @@ body {
 }
 
 .section__icon {
-  max-width: 450px;
+  /*max-width: 450px;*/
   height: 120px;
   background: #F5F4FA;
   border-radius: 4px;
-  padding: 25px 102px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
@@ -1073,9 +1074,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 @media screen and (min-width: 768px) {
   .footer__container {
@@ -1321,7 +1319,7 @@ body {
 
 .form__input {
   display: block;
-  width: 450px;
+  max-width: 450px;
   height: 50px;
   background-color: #2F303A;
   border: 1px solid rgba(255, 255, 255, 0.3);

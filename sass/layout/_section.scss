@@ -17,11 +17,12 @@
  
 }
 .section__icon {
-    max-width: 450px;
+    /*max-width: 450px;*/
     height: 120px;
     background: $bg-color;
     border-radius: 4px;
-    padding: 25px 102px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin-bottom: 30px;
     @media screen and (min-width: 768px) {
         max-width: 354px;

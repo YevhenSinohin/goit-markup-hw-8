@@ -8,22 +8,27 @@
     flex-wrap: wrap;
     gap: 30px;
    
+   
   
 }
 
 .section__merit {
-  
+/*flex-basis: calc(100% - 30px);*/
     flex-basis: calc((100% - 90px) / 4);
- 
+
 }
 .section__icon {
-    /*max-width: 450px;*/
+   
     height: 120px;
     background: $bg-color;
     border-radius: 4px;
     padding-top: 25px;
     padding-bottom: 25px;
     margin-bottom: 30px;
+
+    @media screen and (min-width: 480px) {
+           width: 450px;
+        }
     @media screen and (min-width: 768px) {
         max-width: 354px;
         }

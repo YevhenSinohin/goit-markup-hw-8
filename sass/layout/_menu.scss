@@ -103,6 +103,7 @@
     display: flex;
     gap: 20px;
     position: relative;
+    flex-wrap: wrap;
 
 }
 .mobile-socials-item {
@@ -157,7 +158,7 @@
         font-family: $primary-font;
         font-style: normal;
         font-weight: 500;
-        font-size: 34px;
+        font-size: 31px;
         line-height: calc(40/34);
         letter-spacing: 0.02em;
         text-decoration: none;

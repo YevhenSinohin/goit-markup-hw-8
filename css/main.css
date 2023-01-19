@@ -100,6 +100,7 @@ body {
 
 .backdrop__modal {
   position: absolute;
+  width: 100vw;
   top: 50%;
   left: 50%;
   padding: 40px;
@@ -113,8 +114,13 @@ body {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  /*@media screen and (max-width: 480px) {
+          width: 100vw;
+
+
+      }*/
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) {
   .backdrop__modal {
     width: 450px;
     height: 609px;
@@ -687,18 +693,23 @@ body {
 }
 
 .section__merit {
+  /*flex-basis: calc(100% - 30px);*/
   -ms-flex-preferred-size: calc((100% - 90px) / 4);
       flex-basis: calc((100% - 90px) / 4);
 }
 
 .section__icon {
-  /*max-width: 450px;*/
   height: 120px;
   background: #F5F4FA;
   border-radius: 4px;
   padding-top: 25px;
   padding-bottom: 25px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 480px) {
+  .section__icon {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .section__icon {
@@ -858,8 +869,8 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-preferred-size: calc((100% - 30px) / 2);
-        flex-basis: calc((100% - 30px) / 2);
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
     gap: 30px;
   }
 }
@@ -876,15 +887,23 @@ body {
 
 .team__item {
   background-color: #FFFFFF;
-  /*flex-basis: calc((100% - 90px) / 4);*/
+  margin-bottom: 30px;
   text-align: center;
+  padding-bottom: 24px;
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .team__item {
-    margin-bottom: 30px;
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    padding-bottom: 30px;
   }
 }
 
@@ -1698,6 +1717,8 @@ body {
   display: flex;
   gap: 20px;
   position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .mobile-socials-item {
@@ -1745,7 +1766,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 31px;
   line-height: 1.1764705882;
   letter-spacing: 0.02em;
   text-decoration: none;
